@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel'
 import React, { useState, Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.css';
+import '../banner.css';
 
 
 function ControlledCarousel() {
@@ -15,30 +15,49 @@ function ControlledCarousel() {
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <img
-          className='bannerPrincipal'
-            src="https://cdn.wallpapersafari.com/88/72/I78SE0.jpg"
+            className="Banner"
+            src="https://i.pinimg.com/originals/be/38/c4/be38c4b5eb251520f7add837c0b3bdd0.jpg"
             alt="First slide"
           />
+          <Carousel.Caption className="BannerLetters">
+            <h1 className="BannerLetters" >
+              Lab Notes
+            </h1>
+            <p className="BannerLettersP">If you can think it you can make it</p>
+                    
+          </Carousel.Caption>
+          
         </Carousel.Item>
 
         <Carousel.Item>
           <img
-            src="https://i.pinimg.com/originals/77/20/ba/7720bad30e15738e6c610ba8e673352c.jpg"
+            className="Banner"
+            src="https://i.pinimg.com/originals/c1/b7/d8/c1b7d80ae7e42cc8d969fc16db9ffb15.jpg"
             alt="Second slide"
           />
-
+          <Carousel.Caption className="BannerLetters">
+            <h1 className="BannerLetters">
+              Lab Notes
+            </h1>
+            <p className="BannerLettersP">Be Magic, write Magic</p>
+                    
+          </Carousel.Caption>
         </Carousel.Item>
 
-        <Carousel.Item>
+        <Carousel.Item >
           <img
-            className="d-block w-100"
+            className="Banner"
             src="https://assets.wordpress.envato-static.com/uploads/2017/03/watercolor2.jpeg"
             alt="Third slide"
           />
-      <Carousel.Caption>
-          <h1>LAB NOTES</h1>
-          <img with='100'src='https://image.flaticon.com/icons/svg/497/497492.svg'
-          alt="inside"/>
+          
+         
+      <Carousel.Caption className="BannerLetters">
+          <h1 className="BannerLetters">
+            Lab Notes
+          </h1>
+          <p className="BannerLettersP">The place to write your best ideas</p>
+                    
         </Carousel.Caption>
 
         </Carousel.Item>
@@ -55,5 +74,4 @@ function ControlledCarousel() {
     }
   }
   
-
   export default ControllerBanner

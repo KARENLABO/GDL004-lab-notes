@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
+import '../index.css';
 
 class SignIn extends Component {
-    constructor(props) {
-        super(props);
-    }
+  
     showAlert = () => {
         alert('Hola');
     }
     render() {
         return (
-            <button onClick={this.showAlert}>SignIn</button>
+            <button className='button' onClick={this.showAlert}>SignIn</button>
         )
     }
 }

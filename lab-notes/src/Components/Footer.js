@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../index.css';
 
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
+      <button className='button'onClick={() => setCount(count + 1)}>
         Click me
       </button>
     </div>
