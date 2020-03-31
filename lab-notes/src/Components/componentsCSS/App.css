@@ -1,0 +1,6 @@
+.signUpandsignInPage {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    column-gap: 1em;
+    background-color:#2e3d51;
+}

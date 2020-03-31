@@ -1,7 +1,7 @@
-import Carousel from 'react-bootstrap/Carousel'
 import React, { useState, Component } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
+import '../Components/componentsCSS/banner.css'  
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../banner.css';
 
 
 function ControlledCarousel() {
@@ -16,7 +16,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="Banner"
-            src="https://i.pinimg.com/originals/be/38/c4/be38c4b5eb251520f7add837c0b3bdd0.jpg"
+            src= 'https://images.unsplash.com/photo-1502691876148-a84978e59af8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
             alt="First slide"
           />
           <Carousel.Caption className="BannerLetters">
@@ -65,6 +65,8 @@ function ControlledCarousel() {
     );
   }
   
+
+
   class ControllerBanner extends Component{
 
     render (){
