@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
-import '../index.css';
 import SignIn from '../Components/SignIn';
-// import SignUp from '../Components/SignIn';
+import SignUp from '../Components/SignUp';
+import '../index.css';
+import Button from 'react-bootstrap/Button'
 
-function ChooseOptionAuth (){
-    const [auth, setAuth] = useState([])
 
-    const addAuth = (name, password) =>{
-        const arr = [...auth];
-        arr.push(name, password );
-        setAuth(arr)
-    }
-
-    return (
-        <div>  
-            <SignIn addTodo={addAuth}/>
-            {auth}
-        </div>
+function OptionsAuth (){
+    const [option, setOption] = useState ('sign-in');
+ 
+    return ( 
+    <div>
+        <Button variant="link" 
+        onClick={()=> setOption('sign-in')}>Sign In</Button>
+        <Button  variant="link" 
+        onClick={()=> setOption('sign-up')}>Sign Up</Button>
+        {option === 'sign-in'
+        ? (<SignIn/>)
+        : (<SignUp/>)}
+    </div>
     )
-};
+}
 
-export default ChooseOptionAuth;
+
+export default OptionsAuth;

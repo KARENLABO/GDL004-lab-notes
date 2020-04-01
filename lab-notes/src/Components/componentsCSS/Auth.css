@@ -1,6 +1,3 @@
-input , button{
-    background-color: transparent;
-    color: #d6f0ed;
-    border-color: transparent;
-    border-bottom: red ;
+.authTemplate{
+    color: white;
 }
