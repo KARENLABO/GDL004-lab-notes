@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
-import SignIn from '../Components/SignIn';
-import SignUp from '../Components/SignUp';
+import React from 'react';
+import { Link } from 'react-router-dom'
 import '../index.css';
-import Button from 'react-bootstrap/Button'
+
 
 
 function OptionsAuth (){
-    const [option, setOption] = useState ('sign-in');
- 
     return ( 
-    <div>
-        <Button variant="link" 
-        onClick={()=> setOption('sign-in')}>Sign In</Button>
-        <Button  variant="link" 
-        onClick={()=> setOption('sign-up')}>Sign Up</Button>
-        {option === 'sign-in'
-        ? (<SignIn/>)
-        : (<SignUp/>)}
-    </div>
+        <nav>
+            <ul>
+                <Link to='/SignIn'>
+                <li>Sign In</li>
+                </Link>
+                <Link to='/SignUp'>
+                <li>Sign Up</li>
+                </Link>
+            </ul>
+        </nav>
     )
 }
 

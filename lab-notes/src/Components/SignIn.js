@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 import firebase from '../config/firebase'
 import '../Components/componentsCSS/Auth.css'
+import Banner from './Banner'
 
-function SignIn ({addTodo}) {
+
+function SignIn () {
     const [email, setName] =useState ('')
     const [password, setPassword] =useState ('')
   
     return (
-        <div>
-            <form className= 'authTemplate'>   
+        <div className='SignIn'>
+            <Banner className='banner'/>
+            <div className='inputSignin'>
+            <form >   
                 <label>
                     Email:
                     <input
@@ -41,6 +45,7 @@ function SignIn ({addTodo}) {
             
         </div>
     
+        </div>
     )
     async function login (){
         try {
