@@ -1,0 +1,20 @@
+.Footer{
+    text-align: center;
+}
+
+.pFooter {
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-top:4em;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+    .pFooter {
+        margin-top:8em;
+        font-size: .8em;}
+
+
+}

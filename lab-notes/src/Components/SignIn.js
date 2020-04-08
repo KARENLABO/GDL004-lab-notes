@@ -1,59 +1,30 @@
-import React, {useState} from 'react';
-import firebase from '../config/firebase'
-import '../Components/componentsCSS/Auth.css'
+import React from 'react';
+import Footer from './Footer'
 import Banner from './Banner'
-
+import InputSignIn from './inputsSignIn'
+import ChooseOptionAuth from './ChooseOptionAuth'
+import SocialNetworks from './socialNetwoks'
+import '../Components/componentsCSS/Auth.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 function SignIn () {
-    const [email, setName] =useState ('')
-    const [password, setPassword] =useState ('')
-  
     return (
-        <div className='SignIn'>
-            <Banner className='banner'/>
-            <div className='inputSignin'>
-            <form >   
-                <label>
-                    Email:
-                    <input
-                        name='inputNameSignIn'
-                        value ={email}
-                        type='email'
-                        onChange ={(e)=>{
-                            setName(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>   
-
-                <label>
-                    Password:
-                    <input
-                        name='inputPasswordSignIn'
-                        value ={password}
-                        type='password'
-                        onChange ={(e)=>{
-                            setPassword(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>  
-
-                <button type = 'submit' onClick={login}>Sign In</button>
-
-            </form>
-            
-        </div>
-    
-        </div>
+        <Container  fluid>
+        <Row>
+            <Col md={8} lg={9} className='BannerPage'>
+                <Banner />
+            </Col>
+            <Col md={4} lg={3}className='registerSpace'>
+                <ChooseOptionAuth/>
+                <InputSignIn/>
+                <SocialNetworks/>
+                <Footer/>
+            </Col>
+        </Row>
+    </Container>
     )
-    async function login (){
-        try {
-            await firebase.login(email,password)
-        } catch (error) {
-            alert ('please verify your information and try again!')
-        }
-    }
 }
 
 

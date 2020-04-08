@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import '../index.css';
+import React from 'react';
+import './componentsCSS/footer.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+
 
 
 function Footer() {
-  // Declara una nueva variable de estado, que llamaremos "count".
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button className='button'onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
+    <Container >
+        <Row className='Footer'>
+        <p className='pFooter'>By Ana Karen Ramirez</p>
+        </Row>
+    </Container>
   );
 }
 
-export default {Footer}
+export default Footer

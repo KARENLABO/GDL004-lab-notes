@@ -1,69 +1,26 @@
-import React, {useState} from 'react';
-import firebase from '../config/firebase'
+import React from 'react';
+import ChooseOptionAuth from './ChooseOptionAuth'
+import InputSignIn from './inputsSignIn'
+import Footer from './Footer'
+import Banner from './Banner'
+import SocialNetworks from './socialNetwoks'
 import '../Components/componentsCSS/Auth.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 
 function SignUp(){
-    const [name, setName] =useState ('')
-    const [email, setEmail] =useState ('')
-    const [password, setPassword] =useState ('')
-
-    
     return (
-        <div>
-            <form className= 'authTemplate'>   
-            <label>
-                    Name:
-                    <input
-                        name='inputNameSignUp'
-                        value ={name}
-                        onChange ={(e)=>{
-                            setName(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>   
-
-                <label>
-                    Email:
-                    <input
-                        name='inputEmailSignUp'
-                        value ={email}
-                        type ='email'
-                        onChange ={(e)=>{
-                            setEmail(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>   
-
-                <label>
-                    Password:
-                    <input
-                        name='inputPasswordSignUp'
-                        value ={password}
-                        type='password'
-                        onChange ={(e)=>{
-                            setPassword(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>  
-
-                <button type = 'submit' onClick={onRegister}>Sign Up</button>
-
-            </form>
+        <Container>
             
-        </div>
-    
+            <Banner className='banner'/>
+            <ChooseOptionAuth/>
+            <InputSignIn/>
+            <SocialNetworks/>
+            <Footer/>
+        </Container>
     )
-
-    async function onRegister() {
-		try {
-			await firebase.register(name, email, password)
-		} catch(error) {
-			alert(error.message)
-		}
-	}
 }
 
 

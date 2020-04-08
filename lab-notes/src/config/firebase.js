@@ -16,7 +16,9 @@ class Firebase {
 	constructor() {
 		app.initializeApp(config)
 		this.auth = app.auth()
-		this.db = app.firestore()
+        this.db = app.firestore()
+        this.providerFacebook= new app.auth.FacebookAuthProvider()
+        this.providerGoogle= new app.auth.GoogleAuthProvider()
     }
     login(email, password) {
 		return this.auth.signInWithEmailAndPassword(email, password)
@@ -28,8 +30,14 @@ class Firebase {
     async register(name, email, password) {
 		await this.auth.createUserWithEmailAndPassword(email, password)
 		return this.auth.currentUser.updateProfile({
-			displayName: name
+            displayName: name
         })
+    }
+    async authFacebook (){
+        await this.auth.signInWithPopup(this.providerFacebook)
+    }
+    async authGoogle (){
+        await this.auth.signInWithPopup(this.providerGoogle)
     }
 }
 

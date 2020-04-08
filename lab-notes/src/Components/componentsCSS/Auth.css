@@ -1,3 +1,17 @@
-.authTemplate{
-    color: white;
+.AuthPage{
+    color:#D6F0ED;
+    font-family: Quicksand;
+    font-style: normal;
+    margin-left:0 px;
+    margin-right:0 px;
+   
 }
+
+
+.registerSpace{
+    background: #2E3D51;
+    color:#D6F0ED;
+    font-family: Quicksand;
+    font-style: normal;
+}
+

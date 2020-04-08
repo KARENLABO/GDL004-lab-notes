@@ -1,0 +1,27 @@
+.socialNetworks{
+    padding: 3em;
+    font-size: 1.5em;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.imgsSocialNetworks{
+    width: 210px;
+    max-width: 120px;
+    
+}
+
+.imgsSocialNetworks:hover{
+    width: 100px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+    .socialNetworks{font-size: 1em;}
+    .imgsSocialNetworks{    
+        width: 60px;
+    }
+    .imgsSocialNetworks:hover{
+        width: 80px;
+    }
+}
