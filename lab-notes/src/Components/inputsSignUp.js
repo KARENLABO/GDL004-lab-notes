@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import firebase from '../config/firebase'
 import {useHistory} from 'react-router-dom'
-import '../Components/componentsCSS/Auth.css'
+import './componentsCSS/InputsAuths.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 function InputSignUp(){
     const [name, setName] =useState ('')
@@ -10,50 +13,72 @@ function InputSignUp(){
     const history = useHistory()
     
     return (
-        <div>
-            <form >   
-            <label>
-                    Name:
-                    <input
-                        name='inputNameSignUp'
-                        value ={name}
-                        onChange ={(e)=>{
-                            setName(e.target.value)
-                        }}
-                    >
-                    </input>
-                </label>   
-
+        <Container>
+            <Col className='containerSignIn'>
+                <form >
+                <Row fluid >
+                    <Col lg={12}>
+                    <label>
+                        Name:
+                    </label> 
+                    </Col>
+                        <Col lg={12}>
+                        <input
+                            name='inputNameSignUp'
+                            value ={name}
+                            className='inputsSignIn'
+                            onChange ={(e)=>{
+                                setName(e.target.value)
+                            }}
+                        >
+                        </input>
+                    </Col>
+                </Row>  
+                <Row fluid >
+                <Col lg={12}>
                 <label>
                     Email:
+                </label>   
+                </Col>
+                <Col lg={12}>
                     <input
                         name='inputEmailSignUp'
                         value ={email}
                         type ='email'
+                        className='inputsSignIn'
                         onChange ={(e)=>{
                             setEmail(e.target.value)
                         }}
                     >
                     </input>
-                </label>   
-
+                </Col>
+                </Row>  
+                <Row fluid >
+                <Col lg={12}>
                 <label>
                     Password:
+                </label>
+                </Col>
+                <Col lg={12}>
                     <input
                         name='inputPasswordSignUp'
                         value ={password}
                         type='password'
+                        className='inputsSignIn'
                         onChange ={(e)=>{
                             setPassword(e.target.value)
                         }}
                     >
                     </input>
-                </label>  
-
-                <button type = 'submit' onClick={onRegister}>Sign Up</button>
-
+                </Col>
+                  
+                </Row>  
+                <Row className='rowButtonSignIn'>
+                <button className='ButtonSignIn' type = 'submit' onClick={onRegister}>Sign Up</button>
+                </Row>
             </form>
-        </div>   
+            </Col>
+        </Container>
     
     )
    

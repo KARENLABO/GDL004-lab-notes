@@ -1,0 +1,30 @@
+.Nav{
+    background-color: #2E3D51;
+    color:#F4F4F4;
+    text-align: center;
+    font-family: Quicksand;
+    text-align: center;
+    padding-left: 18%;
+    
+}
+
+
+.avatarpicture{
+    width: 30%;
+    height: 30%;
+    position: flex;
+    right: 10%;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+}
+
+
+.ButtonSignout{
+    font-size: 90%;
+    width: 90%;
+}
+.LettersLabNoteNav{
+    font-size: 350%;
+    
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import Nav from'./Nav'
 
 function DashBoard() {
     return <div className='signUpandsignInPage'>
-       <h1>aqui van a estar tus notas</h1>
+       <Nav/>
     </div>
 }
 

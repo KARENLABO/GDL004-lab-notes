@@ -28,6 +28,36 @@ function ControlledCarousel() {
         </Carousel.Caption>
 
         </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="ImgBanner"
+            src= 'https://www.xtrafondos.com/wallpapers/palmas-en-pared-rosa-pastel-3842.jpg'
+            alt="First slide"
+          />
+          <Carousel.Caption >
+            <h1 className="BannerLetters" >
+              Lab Notes
+            </h1>
+            <p className="BannerLettersP">If you can think it you can make it</p>
+                    
+          </Carousel.Caption>
+          
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="ImgBanner"
+            src="https://data.1freewallpapers.com/detail/headphones-minimalism-pink-pastel.jpg"
+            alt="Second slide"
+          />
+          <Carousel.Caption >
+            <h1 className="BannerLetters">
+              Lab Notes
+            </h1>
+            <p className="BannerLettersP">Be Magic, write Magic</p>
+                    
+          </Carousel.Caption>
+        </Carousel.Item>
       </Carousel>
     );
   }
