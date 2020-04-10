@@ -21,10 +21,24 @@
 
 
 .ButtonSignout{
-    font-size: 90%;
+    margin-top: 20%;
+    font-size: 15px;
     width: 90%;
 }
 .LettersLabNoteNav{
     font-size: 350%;
     
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+    .ButtonSignout {
+        font-size: 12px;
+        width: 80px;
+        
+    }
+    .LettersLabNoteNav{
+        font-size: 250%;
+        
+    }
+
 }
