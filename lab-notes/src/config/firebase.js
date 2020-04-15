@@ -28,17 +28,31 @@ class Firebase {
 		return this.auth.signOut()
     }
     async register(name, email, password) {
-		await this.auth.createUserWithEmailAndPassword(email, password)
+        await this.auth.createUserWithEmailAndPassword(email, password)
+        
 		return this.auth.currentUser.updateProfile({
             displayName: name
         })
     }
     async authFacebook (){
-        await this.auth.signInWithPopup(this.providerFacebook)
+        const fb= await this.auth.signInWithPopup(this.providerFacebook)
+        console.log(fb)
     }
     async authGoogle (){
         await this.auth.signInWithPopup(this.providerGoogle)
     }
+    async fetchData  () {
+        const data = await this.db.collection('Notes').get()
+        return data;
+    }
+    async upLoadNote(AddNote, note){
+        console.log('entre')
+        const data =  this.db.collection('Notes').doc(AddNote.id).set({...AddNote,note})
+        return data;
+
+    }
+    
+
 }
 
 export default new Firebase()

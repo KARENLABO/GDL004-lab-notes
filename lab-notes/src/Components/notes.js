@@ -1,30 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import MakeNotes from './MakeNotes'
+import firebase from '../config/firebase'
+
 
 function Notes (){
     const [notas, setNotas]= useState([])
+    useEffect(()=>{
+      fetchData()
+    },[])
 
-    const AddNote =(nota) =>{
-        const arr =[...notas];
-        arr.push(nota);
-        setNotas(arr)
-    }
-    const removeNote = nota =>{
-        const arr = notas.filter(t=> t !==nota);
-        setNotas(arr);
-    }
 
-    return(
-        <div>
-            <MakeNotes AddNote={AddNote}/>
-            <ul>
-               {notas.map((t)=>{
-                   return (<li key={t}> {t} <button onClick={()=> removeNote(t)}>x</button></li>)
-               })} 
-            </ul>
-        </div>
-        
+    return (
+        <ul>
+            {notas.map(notas =>(
+                <li key={notas.name}>
+                    <MakeNotes AddNote={notas}/>
+                    </li>
+            ))}
+        </ul>
     )
+
+    async function fetchData() {
+		try {
+            const data= await firebase.fetchData()
+            setNotas(data.docs.map(doc => doc.data()))
+		} catch(error) {
+			alert(error)
+		}
+	}
 }
 
 export default Notes
