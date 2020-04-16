@@ -27,32 +27,46 @@ class Firebase {
 	logout() {
 		return this.auth.signOut()
     }
+
     async register(name, email, password) {
         await this.auth.createUserWithEmailAndPassword(email, password)
         
+        console.log(this.auth.currentUser)
 		return this.auth.currentUser.updateProfile({
             displayName: name
         })
     }
+
     async authFacebook (){
-        const fb= await this.auth.signInWithPopup(this.providerFacebook)
-        console.log(fb)
+        await this.auth.signInWithPopup(this.providerFacebook)
+        
     }
+
     async authGoogle (){
         await this.auth.signInWithPopup(this.providerGoogle)
     }
-    async fetchData  () {
-        const data = await this.db.collection('Notes').get()
-        return data;
-    }
-    async upLoadNote(AddNote, note){
-        console.log('entre')
-        const data =  this.db.collection('Notes').doc(AddNote.id).set({...AddNote,note})
-        return data;
 
+    async fetchData  (setNotas) {
+        const data = await this.db.collection('Notes').onSnapshot(snapshot =>{
+            const dataNotes= [];
+            snapshot.forEach(doc => dataNotes.push({...doc.data(), id: doc.id}))
+            setNotas(dataNotes)
+        })
+    return data;
+    }
+
+    upLoadNote(AddNote, name){
+       this.db.collection('Notes').doc(AddNote.id).set({name: name});
+    }
+
+    deleteNote(AddNote){
+        this.db.collection("Notes").doc(AddNote.id).delete()
+       
     }
     
-
+    createNote(newNote){
+        this.db.collection('Notes').add({name: newNote})
+    }
 }
 
 export default new Firebase()

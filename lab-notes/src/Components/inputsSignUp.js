@@ -16,7 +16,7 @@ function InputSignUp(){
         <Container>
             <Col className='containerSignIn'>
                 <form >
-                <Row fluid >
+                <Row  >
                     <Col lg={12}>
                     <label>
                         Name:
@@ -34,7 +34,7 @@ function InputSignUp(){
                         </input>
                     </Col>
                 </Row>  
-                <Row fluid >
+                <Row >
                 <Col lg={12}>
                 <label>
                     Email:
