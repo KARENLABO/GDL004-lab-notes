@@ -41,10 +41,7 @@ function NavController (){
         } catch (error) {
            alert('try Again')
         }
-        
     }
- 
-
 }
 
 

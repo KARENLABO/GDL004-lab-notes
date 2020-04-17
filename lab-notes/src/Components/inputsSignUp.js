@@ -53,7 +53,7 @@ function InputSignUp(){
                     </input>
                 </Col>
                 </Row>  
-                <Row fluid >
+                <Row  >
                 <Col lg={12}>
                 <label>
                     Password:

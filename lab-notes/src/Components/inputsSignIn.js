@@ -14,7 +14,7 @@ function InputSignIn () {
     <Container>
         <Col className='containerSignIn'>
             <form>   
-            <Row fluid >
+            <Row  >
                 <Col lg={12}>
                 <label>
                     Email:
