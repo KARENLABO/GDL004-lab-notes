@@ -1,5 +1,12 @@
 .dashboardPage{
-    background-image: url("https://www3.assets.heroku.com/assets/home/hero/apps_2x-1cbc7cbe49e12ad3cfb038f1b21942c2c4773ed159e422c1c10e5d2257fbdd80.png");
+    background-image:  url("https://www0.assets.heroku.com/assets/home/hero/startup_2x-7d19c0222639db59ac497178719016583e1c886ac83eff67670d2c7584513620.png");
+    background-repeat: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width:100vw;
     height: 100vh;
 }

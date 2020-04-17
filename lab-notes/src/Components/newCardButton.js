@@ -1,20 +1,23 @@
 import React from 'react';
 import Figure from 'react-bootstrap/Figure'
+import './componentsCSS/newCardButton.css'
 
-function NewCardButton () {
+function NewCardButton ({create}) {
     return (
-        <Figure >
+        <Figure className='NewCardButton'>
             <Figure.Image
-                width={171}
-                height={180}
-                alt="171x180"
-                src="https://image.flaticon.com/icons/svg/149/149030.svg"
+                onClick ={create}
+                width={60}
+                height={60}
+                alt="newNote"
+                src="https://github.com/KARENLABO/GDL004-lab-notes/blob/develop/lab-notes/src/Images/plus%20(3).png?raw=true"
             />
-            <Figure.Caption>
+            <Figure.Caption className='lettersnewnote'>
                 NEW NOTE
             </Figure.Caption>
-            </Figure>
+             </Figure>
     )
 }
+
 
 export default NewCardButton

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import firebase from '../config/firebase'
 
 
+
 function MakeNotes ({AddNote}){
     const [note, setNote]= useState(AddNote.name)
 
@@ -16,13 +17,9 @@ function MakeNotes ({AddNote}){
     function deleteNote() {
         
         try {
-            
             firebase.deleteNote(AddNote)
-            
-
         } catch(error) {
             console.log(error)
-        
         }
     }
 
@@ -31,12 +28,13 @@ function MakeNotes ({AddNote}){
             onSubmit = { e => {
                     e.preventDefault();
                     upLoadNote()
-                    
                 }
             }
         >
+       
             
             <input
+            
                 value={note}
                 onChange={(e) =>{
                     setNote(e.target.value)
@@ -44,13 +42,9 @@ function MakeNotes ({AddNote}){
                 type='text'
             />
             <button type='submit'> update </button>
-            <button type='button'onClick={deleteNote}> delete </button>
-            
+            <img onClick={deleteNote} src=''/>       
         </form>
     )
-
-
-
 }
 
 export default MakeNotes

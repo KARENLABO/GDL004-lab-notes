@@ -1,26 +1,27 @@
 import React, {useState, useEffect} from 'react';
 import MakeNotes from './inputsNotes'
 import firebase from '../config/firebase'
+import NewCardButton from'./newCardButton'
+
 
 
 function Notes (){
     const [notas, setNotas]= useState([])
-    const [newNote, setNewNote]= useState()
+    
     useEffect(()=>{
       fetchData()
     },[])
-
+    
 
     return (
-        <ul>
-            <input type='text' value={newNote} onChange={(e) => setNewNote(e.target.value) }/>
-            <button type='submit'onClick={createNote}>Create</button>
-            {notas.map(notas =>(
-                <li key={notas.id}>
+        <div>
+            <NewCardButton create={createNote}/> 
+            {notas.map(notas =>(   
+                <div key={notas.id}>
                     <MakeNotes AddNote={notas}/>
-                    </li>
+                 </div>
             ))}
-        </ul>
+        </div>
     )
 
     async function fetchData() {
@@ -33,7 +34,7 @@ function Notes (){
     }
     
     function createNote () {
-        firebase.createNote(newNote)
+        firebase.createNote('')
     }
 
 }
