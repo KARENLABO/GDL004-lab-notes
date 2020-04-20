@@ -8,7 +8,7 @@ function MakeNotes ({AddNote}){
 
     async function upLoadNote() {
         try {
-            await firebase.upLoadNote(AddNote, note)
+            firebase.upLoadNote(AddNote, note)
         } catch(error) {
             alert('try again, please ')
     
@@ -24,26 +24,21 @@ function MakeNotes ({AddNote}){
     }
 
     return(
-        <form
-            onSubmit = { e => {
+        <div
+            onKeyUp = {
+                (e) => {
                     e.preventDefault();
-                    upLoadNote()
+                    upLoadNote();
                 }
             }
         >
-       
-            
-            <input
-            
+            <input 
+                className= 'nota'
                 value={note}
-                onChange={(e) =>{
-                    setNote(e.target.value)
-                    }}
-                type='text'
+                onChange = {(e) => setNote(e.target.value)}
             />
-            <button type='submit'> update </button>
-            <img onClick={deleteNote} src=''/>       
-        </form>
+            <img onClick={deleteNote} width='20' alt='deletenoteimg' src='https://image.flaticon.com/icons/svg/1215/1215092.svg'/>
+        </div>
     )
 }
 
