@@ -8,10 +8,10 @@ function Cards ({nota, setNote}){
     
     return(
               <Card
-                // bg={variant.toLowerCase()}
-                // // key={}
-                // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}rd
-                style={{ width: '18rem' }}
+                // // bg={variant.toLowerCase()}
+                // // // key={}
+                // // text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}rd
+                // style={{ width: '18rem' }}
               >
                 <Card.Header>
                 <input value={nota}/>

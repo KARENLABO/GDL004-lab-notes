@@ -4,29 +4,13 @@ import firebase from '../config/firebase'
 import NewCardButton from'./newCardButton'
 
 
-
+//  
 function Notes (){
-    const [notas, setNotas]= useState([])
+    const [titlesNotes, setTitlesNotes]= useState([])
     
-    useEffect(()=>{
-      fetchData()
-    },[])
-    
-
-    return (
-        <div>
-            <NewCardButton create={createNote}/> 
-            {notas.map(notas =>(   
-                <div key={notas.id}>
-                    <MakeNotes AddNote={notas}/>
-                 </div>
-            ))}
-        </div>
-    )
-
     async function fetchData() {
 		try {
-         await firebase.fetchData(setNotas)
+         await firebase.fetchData(setTitlesNotes)
       
 		} catch(error) {
 			alert(error)
@@ -37,6 +21,23 @@ function Notes (){
         firebase.createNote('')
     }
 
+    useEffect(()=>{
+      fetchData()
+    },[])
+    
+ 
+    return (
+        
+        <div>
+            <NewCardButton create={createNote}/> 
+            
+            {titlesNotes.map(titlesNotes =>(   
+                <div key={titlesNotes.id}>
+                    <MakeNotes data={titlesNotes}/>
+                 </div>
+            ))}
+        </div>
+    )
 }
 
 export default Notes

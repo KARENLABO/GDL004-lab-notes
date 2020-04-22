@@ -12,6 +12,8 @@ const config = {
     appId: "1:487133628879:web:91dcb0f7237dbce8b42aba"
 };
 
+
+// En esta clase estan todas las peticiones a Firebase
 class Firebase {
 	constructor() {
 		app.initializeApp(config)
@@ -20,6 +22,7 @@ class Firebase {
         this.providerFacebook= new app.auth.FacebookAuthProvider()
         this.providerGoogle= new app.auth.GoogleAuthProvider()
     }
+
     login(email, password) {
 		return this.auth.signInWithEmailAndPassword(email, password)
 	}
@@ -30,8 +33,6 @@ class Firebase {
 
     async register(name, email, password) {
         await this.auth.createUserWithEmailAndPassword(email, password)
-        
-        console.log(this.auth.currentUser)
 		return this.auth.currentUser.updateProfile({
             displayName: name
         })
@@ -39,33 +40,35 @@ class Firebase {
 
     async authFacebook (){
         await this.auth.signInWithPopup(this.providerFacebook)
-        
     }
 
     async authGoogle (){
         await this.auth.signInWithPopup(this.providerGoogle)
     }
 
+    
+
     async fetchData  (setNotas) {
         const data = await this.db.collection('Notes').onSnapshot(snapshot =>{
             const dataNotes= [];
             snapshot.forEach(doc => dataNotes.push({...doc.data(), id: doc.id}))
-            setNotas(dataNotes)
+                setNotas(dataNotes)
         })
     return data;
     }
-
-    upLoadNote(AddNote, name){
-       this.db.collection('Notes').doc(AddNote.id).set({name: name});
+ 
+    upLoadNote(data, tittleNote, bodyNote){
+        const user = this.auth.currentUser.email;
+        this.db.collection('Notes').doc(data.id).set({titleNote: tittleNote, bodyNote: bodyNote, user:user});
     }
 
-    deleteNote(AddNote){
-        this.db.collection("Notes").doc(AddNote.id).delete()
-       
+    deleteNote(data){
+        this.db.collection("Notes").doc(data.id).delete()
     }
     
     createNote(newNote){
-        this.db.collection('Notes').add({name: newNote})
+        const user = this.auth.currentUser.email;
+        this.db.collection('Notes').add({titleNote: newNote, bodyNote: newNote , user:user})   
     }
 }
 
