@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
-const colorsNotes = [ 'Primary','Secondary','Success','Danger','Warning','Info','Light','Dark']
+// const colorsNotes = [ 'Primary','Secondary','Success','Danger','Warning','Info','Light','Dark']
 
 function MakeNotes ({data}){
     const [tittleNote, setNote]= useState(data.titleNote)

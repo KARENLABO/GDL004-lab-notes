@@ -4,7 +4,7 @@ import firebase from '../config/firebase'
 import NewCardButton from'./newCardButton'
 import './componentsCSS/inputsNotes.css'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
+// import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 //  

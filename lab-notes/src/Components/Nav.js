@@ -5,8 +5,8 @@ import '../Components/componentsCSS/Nav.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
-import ModalSignOut from './ModalSignOut'
+
+// import ModalSignOut from './ModalSignOut'
 
 function NavController (){
     const history = useHistory()
@@ -20,7 +20,7 @@ function NavController (){
             <Col className='userInformation'>
 
                     <Row  > 
-                        <img onClick={signOut} className='avatarpicture' alt='avatar'  src='https://image.flaticon.com/icons/svg/456/456141.svg'></img>
+                        <img onClick={signOut} className='avatarpicture' alt='avatar'  src={firebase.ProfilePicture()}></img>
                     
                     </Row>
 

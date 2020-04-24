@@ -42,6 +42,15 @@ class Firebase {
         return this.auth.currentUser.displayName;
     }
 
+    ProfilePicture(){
+        const defaultPhoto= 'https://image.flaticon.com/icons/svg/456/456141.svg';
+        if(this.auth.currentUser.photoURL != null){
+            return this.auth.currentUser.photoURL
+        } else {
+            return defaultPhoto
+        }
+    }
+
     async authFacebook (){
         await this.auth.signInWithPopup(this.providerFacebook)
     }
