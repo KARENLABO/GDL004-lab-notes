@@ -5,8 +5,7 @@ import '../Components/componentsCSS/Nav.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-
-// import ModalSignOut from './ModalSignOut'
+import ModalSignOut from './ModalSignOut'
 
 function NavController (){
     const history = useHistory()
@@ -17,29 +16,15 @@ function NavController (){
                 <h1 className='LettersLabNoteNav' >LAB NOTES</h1>
                 </Col>
             
-            <Col className='userInformation'>
-
-                    <Row  > 
-                        <img onClick={signOut} className='avatarpicture' alt='avatar'  src={firebase.ProfilePicture()}></img>
-                    
-                    </Row>
-
-            <Row lg={12}><p>{firebase.currentUser()}</p></Row>
-            </Col>
+                <ModalSignOut/>
+            
             
             </Row>
-    
+   
         </Container>
     )
 
-    async function signOut (){
-        try { 
-            await firebase.logout()
-            history.push('/SignIn')
-        } catch (error) {
-           alert('try Again')
-        }
-    }
+
 }
 
 

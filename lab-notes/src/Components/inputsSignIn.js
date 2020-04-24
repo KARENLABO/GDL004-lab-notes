@@ -10,6 +10,17 @@ function InputSignIn () {
     const [email, setName] =useState ('')
     const [password, setPassword] =useState ('')
     const history = useHistory()
+
+    async function login (event){
+        event.preventDefault()
+        try {
+            await firebase.login(email,password)
+            history.push('/Dashboard')
+        } catch (error) {
+            alert ('please verify your information and try again!')
+        }
+    }
+
     return (
     <Container>
         <Col className='containerSignIn'>
@@ -63,15 +74,7 @@ function InputSignIn () {
     )
 //firebase.auth().onAuthStateChanged
     
-    async function login (event){
-        event.preventDefault()
-        try {
-            await firebase.login(email,password)
-            history.push('/Dashboard')
-        } catch (error) {
-            alert ('please verify your information and try again!')
-        }
-    }
+
 }
 
 export default InputSignIn;
