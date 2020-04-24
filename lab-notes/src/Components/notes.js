@@ -2,40 +2,39 @@ import React, {useState, useEffect} from 'react';
 import MakeNotes from './inputsNotes'
 import firebase from '../config/firebase'
 import NewCardButton from'./newCardButton'
-
+import './componentsCSS/inputsNotes.css'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 //  
 function Notes (){
     const [titlesNotes, setTitlesNotes]= useState([])
     
-    async function fetchData() {
-		try {
-         await firebase.fetchData(setTitlesNotes)
-      
-		} catch(error) {
-			alert(error)
-		}
-    }
+    
     
     function createNote () {
         firebase.createNote('')
     }
 
     useEffect(()=>{
-      fetchData()
+        firebase.fetchData(setTitlesNotes);
     },[])
     
  
     return (
         
-        <div>
+        <div >
             <NewCardButton create={createNote}/> 
-            
-            {titlesNotes.map(titlesNotes =>(   
-                <div key={titlesNotes.id}>
-                    <MakeNotes data={titlesNotes}/>
-                 </div>
-            ))}
+            <Container className='cards'>
+                {titlesNotes.map(note =>(  
+                
+                    <Col   key={note.id}>
+                        <MakeNotes  data={note}/>
+                    </Col> 
+                
+                ))}
+            </Container>
         </div>
     )
 }

@@ -4,8 +4,7 @@ import './componentsCSS/inputsNotes.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
+
 
 const colorsNotes = [ 'Primary','Secondary','Success','Danger','Warning','Info','Light','Dark']
 
@@ -32,32 +31,41 @@ function MakeNotes ({data}){
     }
 
     return(
-        <div>
-        
-                <div
+        <Container className='card'>
+            <Container
+             
+                className='top-bar'
                 onKeyUp = {
                     (e) => {
                         e.preventDefault();
                         upLoadNote();
                     }
                 }
-                style={{ width: '18rem' }}
             >
+                <Row md={12} lg={12}>
+                    <Col sm={10}md={10}lg={10}>
                     <input 
                         className= 'Titlenota'
                         value={tittleNote}
                         placeholder='Title'
                         onChange = {(e) => setNote(e.target.value)}
                     />
-                </div>
-                <div
+                    </Col>
+                    <Col sm={1}md={1}lg={1}>
+                    <img onClick={deleteNote} width='20' alt='deletenoteimg' src='https://image.flaticon.com/icons/svg/1214/1214428.svg'/>
+                    </Col>
+                </Row>
+            </Container>
+
+            <div
+            className='middle-bar'
                 onKeyUp = {
                     (e) => {
                         e.preventDefault();
                         upLoadNote()
                     }
                 }
-                style={{ width: '18rem' }}
+                
             >
                 <input 
                     className= 'Bodynota'
@@ -65,10 +73,12 @@ function MakeNotes ({data}){
                     placeholder='Write your ideas here'
                     onChange = {(e) => setbodyNote(e.target.value)}
                     type='textarea'
+                  
                 />
-                <img onClick={deleteNote} width='20' alt='deletenoteimg' src='https://image.flaticon.com/icons/svg/1215/1215092.svg'/>
-                </div>
-                </div>
+                
+              
+            </div>
+        </Container>
     )
 }
 

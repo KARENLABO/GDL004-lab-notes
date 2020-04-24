@@ -1,14 +1,53 @@
+.cards{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 3em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 
+.card{
+   background-color: transparent;
+   border-color: transparent;
+   background: #F9FBFF;
+   opacity: 0.7;
+   border-radius: 10px 10px 10px 10px;
+   box-shadow: -5px 5px 10px rgba(#777777, .5);
+   width: auto;
+   text-align: center;
+   width: 270px;
+   
+}
 
 .Titlenota{
  font-weight: bold;
+ font-size: 15px;
  text-align: center;
  font-family: Quicksand; 
+ background-color: transparent;
+ border-color: transparent;
+ width: 110%;
 }
 
 .Bodynota{
     height: 120px;
+    width: 90%;
     text-align: center;
     font-family: Quicksand;
+    background-color: transparent;
+    border-color: transparent;
+}
 
+.top-bar{
+    background-color: rgb(200, 211, 224);
+    
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px)  {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);   
+    }
+     
 }

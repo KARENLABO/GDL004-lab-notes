@@ -4,9 +4,11 @@ import '../Components/componentsCSS/socialNetworks.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import {useHistory} from 'react-router-dom'
 
 
 function SocialNetworksAuth (){
+    const history = useHistory()
     return ( 
         <Container className='socialNetworks'>
             <Row >
@@ -27,17 +29,21 @@ function SocialNetworksAuth (){
         </Container>
     )
 
-    async function facebook (){
+    async function facebook (event){
+        event.preventDefault()
         try {
             await firebase.authFacebook()
+            history.push('/Dashboard')
         } catch (error) {
            console.log(error)
         }
         
     }
-    async function google (){
+    async function google (event){
+        event.preventDefault()
         try {
             await firebase.authGoogle()
+            history.push('/Dashboard')
         } catch (error) {
            console.log(error)
         }

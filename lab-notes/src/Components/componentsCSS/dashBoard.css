@@ -1,12 +1,6 @@
 .dashboardPage{
-    background-image:  url("https://images.unsplash.com/photo-1584936293040-90352818b0df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
-    background-repeat: no-repeat;
-    background-image: fixed;
-    background-image: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width:100vw;
+    background: white;
+    font-family: Quicksand;
     height: 100vh;
 }
+

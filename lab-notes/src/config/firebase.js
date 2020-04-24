@@ -38,6 +38,10 @@ class Firebase {
         })
     }
 
+    currentUser(){
+        return this.auth.currentUser.displayName;
+    }
+
     async authFacebook (){
         await this.auth.signInWithPopup(this.providerFacebook)
     }
@@ -48,19 +52,19 @@ class Firebase {
 
     
 
-    async fetchData  (setNotas) {
-        const data = await this.db.collection('Notes').onSnapshot(snapshot =>{
+    fetchData  (setNotas) {
+        this.db.collection('Notes').where('user', '==', this.auth.currentUser.email).onSnapshot(snapshot =>{
             const dataNotes= [];
             snapshot.forEach(doc => dataNotes.push({...doc.data(), id: doc.id}))
-                setNotas(dataNotes)
+            setNotas(dataNotes)
         })
-    return data;
     }
  
     upLoadNote(data, tittleNote, bodyNote){
         const user = this.auth.currentUser.email;
         this.db.collection('Notes').doc(data.id).set({titleNote: tittleNote, bodyNote: bodyNote, user:user});
     }
+  
 
     deleteNote(data){
         this.db.collection("Notes").doc(data.id).delete()
