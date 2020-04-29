@@ -67,14 +67,15 @@ function MakeNotes ({data}){
                 }
                 
             >
-                <input 
+                <textarea 
                     className= 'Bodynota'
                     value={bodyNote}
                     placeholder='Write your ideas here'
                     onChange = {(e) => setbodyNote(e.target.value)}
                     type='textarea'
-                  
-                />
+                
+                >
+                </textarea>
                 
               
             </div>

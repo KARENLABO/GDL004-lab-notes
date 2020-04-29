@@ -13,16 +13,16 @@ function InputSignUp(){
     const history = useHistory()
     
     return (
-        <Container>
-            <Col className='containerSignIn'>
+        <Container className='containerSignIn'>
+            <Row >
                 <form >
                 <Row  >
                     <Col lg={12}>
-                    <label>
-                        Name:
-                    </label> 
+                        <label>
+                            Name:
+                        </label> 
                     </Col>
-                        <Col lg={12}>
+                    <Col lg={12}>
                         <input
                             name='inputNameSignUp'
                             value ={name}
@@ -30,8 +30,8 @@ function InputSignUp(){
                             onChange ={(e)=>{
                                 setName(e.target.value)
                             }}
-                        >
-                        </input>
+                        />
+                        
                     </Col>
                 </Row>  
                 <Row >
@@ -49,8 +49,8 @@ function InputSignUp(){
                         onChange ={(e)=>{
                             setEmail(e.target.value)
                         }}
-                    >
-                    </input>
+                    />
+                    
                 </Col>
                 </Row>  
                 <Row  >
@@ -68,8 +68,8 @@ function InputSignUp(){
                         onChange ={(e)=>{
                             setPassword(e.target.value)
                         }}
-                    >
-                    </input>
+                    />
+                    
                 </Col>
                   
                 </Row>  
@@ -77,7 +77,7 @@ function InputSignUp(){
                 <button className='ButtonSignIn' type = 'submit' onClick={onRegister}>Sign Up</button>
                 </Row>
             </form>
-            </Col>
+            </Row>
         </Container>
     
     )

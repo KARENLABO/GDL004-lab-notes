@@ -2,7 +2,6 @@
     color:#D6F0ED;
     font-weight: 500;
     font-size: 1.6em;
-
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -13,7 +12,7 @@
     color:#D6F0ED;
     font-weight: 500;
     font-size: 1.65em;
-    text-decoration: underline #11DBB3;
+    text-decoration: underline #3a4ed5;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -21,5 +20,12 @@
     .OptionsToAuth:hover{font-size: 1.1em;}
 }
 
+
+@media only screen and (min-width: 1400px)  {
+    .OptionsToAuth{
+        margin-top: 20px;
+    }
+    
+}
 
 
