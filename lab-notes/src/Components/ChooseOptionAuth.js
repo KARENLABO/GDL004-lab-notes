@@ -9,12 +9,12 @@ function OptionsAuth (){
     return ( 
         <Container >
             <Row>
-            <Col>
+            <Col >
                 <Link className='OptionsToAuth' to='/SignIn'>
                     <p>Sign In</p>
                 </Link>
             </Col>
-            <Col>
+            <Col >
                 <Link className='OptionsToAuth' to='/SignUp'>
                     <p>Sign Up</p>
                 </Link>

@@ -47,7 +47,7 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img
             className="ImgBanner"
-            src="https://data.1freewallpapers.com/detail/headphones-minimalism-pink-pastel.jpg"
+            src="https://3.bp.blogspot.com/-WqrzUNDz9pc/WaGyaWWOFRI/AAAAAAAAj4k/F3zfTXXV9D4CKvMlbps2tf9On2KD3fJ2gCLcBGAs/s1600/walppapers-fondos-1600x1000px%2B%25283%2529.jpg"
             alt="Second slide"
           />
           <Carousel.Caption >

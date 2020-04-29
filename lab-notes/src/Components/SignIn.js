@@ -13,10 +13,10 @@ function SignIn () {
     return (
         <Container  fluid>
         <Row>
-            <Col md={8} lg={9} className='BannerPage'>
+            <Col md={8} lg={8} xl={9} className='BannerPage'>
                 <Banner />
             </Col>
-            <Col md={4} lg={3}className='registerSpace'>
+            <Col md={4} lg={4} xl={3} className='registerSpace'>
                 <ChooseOptionAuth/>
                 <InputSignIn/>
                 <SocialNetworks/>

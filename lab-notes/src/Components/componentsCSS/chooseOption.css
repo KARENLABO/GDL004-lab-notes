@@ -2,7 +2,7 @@
     color:#D6F0ED;
     font-weight: 500;
     font-size: 1.6em;
-    line-height: 5em;
+
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -18,14 +18,7 @@
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px)  {
-    .OptionsToAuth {
-        font-size: 1em;   
-    }
     .OptionsToAuth:hover{font-size: 1.1em;}
-    .containerSignIn label{
-        font-size: 1em;
-        margin-top:2em;}
-
 }
 
 

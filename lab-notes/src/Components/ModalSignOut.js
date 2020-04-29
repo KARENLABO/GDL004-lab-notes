@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom'
 import '../Components/componentsCSS/Nav.css'
+import styles from './componentsCSS/Button.module.css'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import firebase from '../config/firebase'
@@ -31,11 +32,11 @@ function ModalSignOut() {
       <div>
         <Container>
             <Row>
-                <Col>
+                <Col xs={9} sm={9} lg={9} md={9} >
                 <Avatar handleShow={handleShow}/>
                 </Col>
-                <Col>
-                    <img  className='points' alt='points'  width='40' src={'https://image.flaticon.com/icons/svg/482/482620.svg'}></img>
+                <Col xs={3} sm={3} lg={3} md={3}>
+                    <img   onClick={handleShow} className={styles.options} alt='points'   src={'https://github.com/KARENLABO/GDL004-lab-notes/blob/develop/lab-notes/src/Images/down-arrow.png?raw=true'}></img>
                 </Col>
             </Row>
         </Container>

@@ -1,6 +1,5 @@
 .socialNetworks{
-    padding: 3em;
-    font-size: 1.5em;
+    font-size: 22px;
     text-align: center;
     align-content: center;
     justify-content: center;
@@ -8,20 +7,30 @@
 
 .imgsSocialNetworks{
     width: 210px;
-    max-width: 120px;
+    max-width: 100px;
     
 }
 
 .imgsSocialNetworks:hover{
     width: 100px;
+
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px)  {
-    .socialNetworks{font-size: 1em;}
+@media only screen and (min-width: 1400px)  {
+    .socialNetworks{
+        font-size: 2em;
+    }
+    .imgsSocialNetworks{
+        text-align: end;
+        align-content: left;
+        justify-content: left;
+
+
+    }
     .imgsSocialNetworks{    
-        width: 60px;
+        width: 120px;
     }
     .imgsSocialNetworks:hover{
-        width: 80px;
+        width: 90px;
     }
 }

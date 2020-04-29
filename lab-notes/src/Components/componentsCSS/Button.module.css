@@ -1,0 +1,33 @@
+
+
+.options{
+    margin-top: 50%;
+    width: 35%;
+    min-width: 30px;
+}
+
+.avatar{
+    
+    background-color: white;
+    border-radius: 50%;
+    width: 60%;
+    min-width: 30px;
+    max-width: 60px;
+}
+
+.name{
+    margin-bottom: 0px;
+    font-size: 80%;
+}
+
+
+.prueba{
+    width: 210px;
+    max-width: 100px;
+}
+
+.prueba2{
+    width: 210px;
+    max-width: 100px;
+}
+

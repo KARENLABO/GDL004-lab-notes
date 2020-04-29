@@ -12,11 +12,12 @@ function NavController (){
     return ( 
         <Container fluid className='Nav'>
             <Row>
-                <Col  md={6} lg={10}>
+                <Col xs={7}sm={7} md={8} lg={8}>
                 <h1 className='LettersLabNoteNav' >LAB NOTES</h1>
                 </Col>
-            
-                <ModalSignOut/>
+                <Col xs={5}sm={5} md={4} lg={4}>
+                    <ModalSignOut/>
+                </Col>
             
             
             </Row>

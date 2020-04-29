@@ -3,18 +3,19 @@ import firebase from '../config/firebase'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import styles from './componentsCSS/Button.module.css'
 
 
-function Avatar ({handleShow}){
+function Avatar (){
     return (
-        <Container className='userInformation' onClick={handleShow}>
+        <Container >
             <Row>
             <Col>
             <div>
-                <img  className='avatarpicture' alt='avatar'  src={firebase.ProfilePicture()}></img>
+                <img  className={styles.avatar}  alt='avatar'  src={firebase.ProfilePicture()}></img>
             </div>
             <div>
-                <p>{firebase.currentUser()}</p>
+                <p className={styles.name} >{firebase.currentUser()}</p>
             </div>
             </Col>
             

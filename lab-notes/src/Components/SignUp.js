@@ -13,10 +13,10 @@ function SignUp () {
     return (
         <Container  fluid>
         <Row>
-            <Col md={8} lg={9} className='BannerPage'>
+            <Col xs={12} sm={9} md={9} lg={9} xl={9}className='BannerPage'>
                 <Banner />
             </Col>
-            <Col md={4} lg={3}className='registerSpace'>
+            <Col sm={3} md={3} lg={3} xl={3}className='registerSpace'>
                 <ChooseOptionAuth/>
                 <InputSignUp/>
                 <SocialNetworks/>
