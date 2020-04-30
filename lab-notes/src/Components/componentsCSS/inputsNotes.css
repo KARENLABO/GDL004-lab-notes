@@ -1,56 +1,60 @@
 .cards{
-    margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
     gap: 3em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    
 }
 
 .card{
-   background-color: transparent;
    border-color: transparent;
-   background: #F9FBFF;
-   opacity: 0.7;
-   border-radius: 10px 10px 10px 10px;
-   box-shadow: -5px 5px 10px rgba(#777777, .5);
-   width: auto;
-   text-align: center;
-   width: 270px;
+   padding: 0px;
+
    
 }
 
 .Titlenota{
- font-weight: bold;
- font-size: 15px;
- text-align: center;
- font-family: Quicksand; 
- background-color: transparent;
- border-color: transparent;
- width: 110%;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    font-family: Quicksand; 
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    
 }
 
 .Bodynota{
-    height: 120px;
-    width: 90%;
+    height: 100px;
+    width: 100%;
     text-align: center;
     font-family: Quicksand;
     background-color: transparent;
-    border-color: transparent;
+    color: rgb(17, 14, 14);
+    padding: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: #8566aa;
+    border-width: 3px;
+   
 }
 
 .top-bar{
-    background-color: rgb(200, 211, 224);
-    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #8566aa;
+}
+
+.Titlenota{
+    color: white;
 }
 
 @media only screen and (min-width: 1200px)  {
     .cards{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);   
+        
+        grid-template-columns: repeat(4, 1fr);   
     }
-     
 }
+
 
 @media only screen and (min-width: 1200px)  {
     

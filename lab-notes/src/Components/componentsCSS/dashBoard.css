@@ -1,6 +1,11 @@
 .dashboardPage{
-    background: white;
+    background-image: url('https://www3.assets.heroku.com/assets/home/hero-background-newswatch-c4897c103cbbe54eca6f805c74eafb0321adc408dc681e8d75a6cc70be85bcdb.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     font-family: Quicksand;
     height: 100vh;
+    
 }
+
 

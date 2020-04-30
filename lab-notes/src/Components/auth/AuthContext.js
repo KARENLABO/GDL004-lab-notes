@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import firebase from "firebase";
 import Spinner from 'react-bootstrap/Spinner'
+import Styles from '../componentsCSS/Spinner.module.css'
 
 export const AuthContext = React.createContext();
 
@@ -17,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   if(pending){
-    return <Spinner animation="grow" variant="danger" />
+    return <Spinner animation="grow" className={Styles.spinner}/>
   }
 
   return (

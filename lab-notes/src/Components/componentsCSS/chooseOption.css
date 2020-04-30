@@ -17,8 +17,11 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+@media only screen and (max-width: 1000px) and (min-width: 768px)  {
     .OptionsToAuth:hover{font-size: 1.1em;}
+    .OptionsToAuth{
+        margin-top: 10%;
+    }
 }
 
 

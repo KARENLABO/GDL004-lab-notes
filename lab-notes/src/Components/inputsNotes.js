@@ -4,6 +4,7 @@ import './componentsCSS/inputsNotes.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Styles from './componentsCSS/Button.module.css'
 
 
 // const colorsNotes = [ 'Primary','Secondary','Success','Danger','Warning','Info','Light','Dark']
@@ -32,8 +33,7 @@ function MakeNotes ({data}){
 
     return(
         <Container className='card'>
-            <Container
-             
+            <Row
                 className='top-bar'
                 onKeyUp = {
                     (e) => {
@@ -42,8 +42,7 @@ function MakeNotes ({data}){
                     }
                 }
             >
-                <Row md={12} lg={12}>
-                    <Col sm={10}md={10}lg={10}>
+                <Col className={Styles.paddingCero}>
                     <input 
                         className= 'Titlenota'
                         value={tittleNote}
@@ -51,13 +50,14 @@ function MakeNotes ({data}){
                         onChange = {(e) => setNote(e.target.value)}
                     />
                     </Col>
-                    <Col sm={1}md={1}lg={1}>
-                    <img onClick={deleteNote} width='20' alt='deletenoteimg' src='https://image.flaticon.com/icons/svg/1214/1214428.svg'/>
-                    </Col>
-                </Row>
-            </Container>
 
-            <div
+                    <Col lg={2} className={Styles.paddingCero} >
+                    <img onClick={deleteNote} width='20' alt='deletenoteimg' src='https://image.flaticon.com/icons/svg/1214/1214428.svg'/>
+                </Col>
+        
+            </Row>
+
+            <Row
             className='middle-bar'
                 onKeyUp = {
                     (e) => {
@@ -78,7 +78,7 @@ function MakeNotes ({data}){
                 </textarea>
                 
               
-            </div>
+            </Row>
         </Container>
     )
 }

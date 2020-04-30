@@ -1,18 +1,19 @@
 .Nav{
-    background-color: #2E3D51;
+    color: #606aa5;
     text-align: center;
     font-family: Quicksand;
     text-align: center;
-    color: white;
-    border-bottom-style: solid
-    
+    border-bottom-style: solid;
+    width: 100vw;
+    padding: 0px;
+    font-weight: bold;
 }
 
 .Nav{
     border-bottom: 6px solid transparent;
     -moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
     -webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
-    border-image: linear-gradient(to bottom right, #c929c9 0%,  #3ad568 20%, #3a4ed5 100% );
+    border-image: linear-gradient(to bottom right, #f1def1 0%,  #bd27a9 20%, #3a4ed5 100% );
     border-image-slice: 1;
 }
 
@@ -38,15 +39,11 @@
 
 .LettersLabNoteNav{
     font-size: 350%;
-    /* color: #4f97fc; */
+    margin-left: 25%;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px)  {
-    .ButtonSignout {
-        font-size: 12px;
-        width: 80px;
-        
-    }
+    
     .LettersLabNoteNav{
         font-size: 250%;
         
