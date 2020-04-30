@@ -1,6 +1,5 @@
 import React from 'react';
 import './componentsCSS/chooseOption.css'
-import Styles from './componentsCSS/AuthOption.module.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -8,8 +7,8 @@ import { Link } from 'react-router-dom'
 
 function OptionsAuth (){
     return ( 
-        <Container  className={Styles.margin}>
-            <Row>
+        <Container   >
+            <Row >
             <Col >
                 <Link className='OptionsToAuth' to='/SignIn'>
                     <p>Sign In</p>

@@ -8,6 +8,9 @@ import '../Components/componentsCSS/Auth.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Styles from './componentsCSS/AuthOption.module.css'
+
+
 
 function SignIn () {
     return (
@@ -17,10 +20,22 @@ function SignIn () {
                 <Banner />
             </Col>
             <Col md={4} lg={4} xl={3} className='registerSpace'>
-                <ChooseOptionAuth/>
-                <InputSignIn/>
-                <SocialNetworks/>
-                <Footer/>
+                
+                    <ChooseOptionAuth/>
+                                
+                
+                    <InputSignIn/>
+                
+
+                
+                    <SocialNetworks/>
+                
+
+                
+                    <Footer/>
+                
+                
+                
             </Col>
         </Row>
     </Container>

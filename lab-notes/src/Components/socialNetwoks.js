@@ -19,11 +19,11 @@ function SocialNetworksAuth (){
             </Row>
             <Row>
             <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                <img className={styles.prueba} onClick={google}alt='googleImg'src='https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png'/>
+                <img className='imgsSocialNetworks' onClick={google}alt='googleImg'src='https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png'/>
              
             </Col>
             <Col xs={6} sm={6} md={6} lg={6} xl={6}>
-                <img  className={styles.prueba2} onClick={facebook} alt='facebookImg'src='https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png'/>
+                <img  className='imgsSocialNetworks' onClick={facebook} alt='facebookImg'src='https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png'/>
             </Col>
             </Row>  
     

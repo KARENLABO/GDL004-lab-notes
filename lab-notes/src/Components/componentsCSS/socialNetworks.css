@@ -1,14 +1,12 @@
 .socialNetworks{
-    font-size: 22px;
+    font-size: 110%;
     text-align: center;
     align-content: center;
     justify-content: center;
 }
 
 .imgsSocialNetworks{
-    width: 210px;
-    max-width: 100px;
-    
+    width: 65%;
 }
 
 .imgsSocialNetworks:hover{
@@ -16,21 +14,19 @@
 
 }
 
-@media only screen and (min-width: 1400px)  {
-    .socialNetworks{
-        font-size: 2em;
-    }
-    .imgsSocialNetworks{
-        text-align: end;
-        align-content: left;
-        justify-content: left;
-
-
-    }
-    .imgsSocialNetworks{    
-        width: 120px;
-    }
+@media only screen and (max-width: 600px)  {
     .imgsSocialNetworks:hover{
         width: 90px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px)  {
+    .socialNetworks{
+        font-size: 150%;
+    }
+
+    .imgsSocialNetworks:hover{
+        width: 60%;
     }
 }

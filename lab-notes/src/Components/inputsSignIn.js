@@ -22,8 +22,8 @@ function InputSignIn () {
     }
 
     return (
-    <Container className='containerSignIn'>
-        <Row>
+    <Container>
+        <Col className='containerSignIn'>
             <form>   
             <Row  >
                 <Col lg={12}>
@@ -40,8 +40,8 @@ function InputSignIn () {
                         onChange ={(e)=>{
                             setName(e.target.value)
                         }}
-                    />
-                    
+                    >
+                    </input>
                 </Col>
             </Row>
             <Row>
@@ -59,8 +59,8 @@ function InputSignIn () {
                         onChange ={(e)=>{
                             setPassword(e.target.value)
                         }}
-                    />
-                    
+                    >
+                    </input>
                 </Col>
                 
             </Row>
@@ -68,8 +68,7 @@ function InputSignIn () {
                 <button  className='ButtonSignIn' type = 'submit' onClick={login}>Sign In</button>
             </Row>
             </form>
-       
-            </Row>
+            </Col>    
     </Container>
     
     )

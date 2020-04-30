@@ -8,6 +8,7 @@
     
 }
 
+
 .OptionsToAuth:hover{
     color:#D6F0ED;
     font-weight: 500;
@@ -21,9 +22,20 @@
 }
 
 
+
 @media only screen and (min-width: 1400px)  {
     .OptionsToAuth{
         margin-top: 20px;
+        font-size: 2.5em;
+        
+    }
+
+    .OptionsToAuth:hover{
+        color:#D6F0ED;
+        font-weight: 500;
+        font-size: 2.3em;
+        text-decoration: underline #3a4ed5;
+        font-family: 'Quicksand', sans-serif;
     }
     
 }
