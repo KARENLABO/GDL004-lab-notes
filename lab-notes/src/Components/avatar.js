@@ -18,7 +18,7 @@ function Avatar ({handleShow}){
                 </Col>
 
                 <Col className={styles.paddingCero} sm={3} md={3} lg={3} xl={3}>
-                    <img   onClick={handleShow} className={styles.options} alt='points'   src={'https://image.flaticon.com/icons/svg/271/271210.svg'}/>
+                    <img   onClick={handleShow} className={styles.options} alt='points'   src={'https://github.com/KARENLABO/GDL004-lab-notes/blob/develop/lab-notes/src/Images/downloading.png?raw=true'}/>
                 </Col>
             
             </Row>

@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import firebase from '../config/firebase'
 import Avatar from './avatar'
+import Styles from './componentsCSS/container-modal.module.css'
+
 
 
 
@@ -29,18 +31,25 @@ function ModalSignOut() {
         <div>
             <Avatar handleShow={handleShow}/>  
 
-            <Modal show={show} onHide={handleClose} animation={true}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>
-                        <Avatar/>
+            <Modal  show={show}  onHide={handleClose} animation={true}>
+                    <Modal.Header className={Styles.fotoModal}   closeButton>
+                        <Modal.Title >
+                                                
+                            <img  className={Styles.avatar}  alt='avatar'  src={firebase.ProfilePicture()}></img>
+                                            
+                            <p className={Styles.name} >{firebase.currentUser()}</p>
+                                
+                           
+                           
+
                         </Modal.Title>
                     </Modal.Header>
 
-                <Modal.Footer>
-                    <Button variant="danger" onClick={signOut}>
+                <Modal.Footer className={Styles.conteinerModal}>
+                    <Button variant="dark"  onClick={signOut}>
                         Sign Out
                     </Button>
-                    <Button variant="dark" onClick={handleClose}>
+                    <Button className={Styles.buttonClosesecion} onClick={handleClose}>
                         Close
                     </Button>            
                 </Modal.Footer>

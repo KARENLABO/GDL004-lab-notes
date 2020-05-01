@@ -1,0 +1,25 @@
+.conteinerModal{
+   justify-content: center;
+}
+
+.fotoModal{
+    border-color: #8566aa;
+    border-width: 3px;
+    color: #8566aa ;
+    margin-left: 25%;
+
+}
+
+
+.avatar{
+    text-align: center;
+    border-radius: 50%;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+.buttonClosesecion{
+    background-color: #8566aa;
+    border-color: #8566aa;
+    
+}

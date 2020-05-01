@@ -2,8 +2,11 @@
     width: 20%;
     min-width: 20px;
     max-width: 30px;;
-    
 }
+
+.options:hover{width: 30%;}
+
+
 .paddingCero{
     padding: 0px;
     align-self: center;

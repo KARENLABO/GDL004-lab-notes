@@ -1,8 +1,13 @@
 .NewCardButton{
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 5%;
+    width: 85px;
+    height: 100px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: white;
     font-weight: bold;
 }
+
+
+.NewCardButton:hover{ width: 90px;}
