@@ -10,7 +10,7 @@ function App() {
     return (
         <AuthProvider>
             <Router>
-                <Switch>
+                   <Switch>
                     <Route path='/' exact component={SignIn}/>
                     <Route path='/SignIn' component={SignIn}/>
                     <Route path='/SignUp' component={SignUp}/>
