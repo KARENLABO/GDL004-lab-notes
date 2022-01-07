@@ -8,9 +8,6 @@ import '../Components/componentsCSS/Auth.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Styles from './componentsCSS/AuthOption.module.css'
-
-
 
 function SignIn () {
     return (

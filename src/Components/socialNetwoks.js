@@ -5,8 +5,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import {useHistory} from 'react-router-dom'
-import styles from './componentsCSS/Button.module.css'
-
 
 function SocialNetworksAuth (){
     const history = useHistory()
@@ -38,8 +36,8 @@ function SocialNetworksAuth (){
         } catch (error) {
            console.log(error)
         }
-        
     }
+
     async function google (event){
         event.preventDefault()
         try {
@@ -47,10 +45,8 @@ function SocialNetworksAuth (){
             history.push('/Dashboard')
         } catch (error) {
            console.log(error)
-        }
-        
+        }    
     }
-
 }
 
 
