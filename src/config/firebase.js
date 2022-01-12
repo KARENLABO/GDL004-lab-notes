@@ -1,8 +1,9 @@
-import app from 'firebase/app';
-import 'firebase/firebase-auth'
-import 'firebase/firebase-firestore'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import AvatarImage from '../Images/Avatar.png'
 
-const config = {
+const firebaseConfig = {
     apiKey: "AIzaSyCcIAiarXr60m4z1_KMt82tie0LrZGj82I",
     authDomain: "lab-notes-df536.firebaseapp.com",
     databaseURL: "https://lab-notes-df536.firebaseio.com",
@@ -16,11 +17,11 @@ const config = {
 // En esta clase estan todas las peticiones a Firebase
 class Firebase {
 	constructor() {
-		app.initializeApp(config)
-		this.auth = app.auth()
-        this.db = app.firestore()
-        this.providerFacebook= new app.auth.FacebookAuthProvider()
-        this.providerGoogle= new app.auth.GoogleAuthProvider()
+		firebase.initializeApp(firebaseConfig)
+		this.auth = firebase.auth()
+        this.db = firebase.firestore()
+        this.providerFacebook= new firebase.auth.FacebookAuthProvider()
+        this.providerGoogle= new firebase.auth.GoogleAuthProvider()
     }
 
     login(email, password) {
@@ -43,7 +44,7 @@ class Firebase {
     }
 
     ProfilePicture(){
-        const defaultPhoto= 'https://image.flaticon.com/icons/svg/456/456141.svg';
+        const defaultPhoto= {AvatarImage};
         if(this.auth.currentUser.photoURL != null){
             return this.auth.currentUser.photoURL
         } else {
